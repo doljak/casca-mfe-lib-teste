@@ -50,7 +50,21 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "projects/casca-mfe-lib-teste/environments/environment.ts",
+                  "with": "projects/casca-mfe-lib-teste/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/casca-mfe-lib-teste/environments/environment.ts",
+                  "with": "projects/casca-mfe-lib-teste/environments/environment.uat.ts"
+                }
+              ]
             },
             "development": {
               "optimization": false,
@@ -65,6 +79,9 @@
           "configurations": {
             "production": {
               "buildTarget": "casca-mfe-lib-teste:build:production"
+            },
+            "staging": {
+              "buildTarget": "casca-mfe-lib-teste:build:staging"
             },
             "development": {
               "buildTarget": "casca-mfe-lib-teste:build:development"
